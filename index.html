@@ -1,123 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Data viz doodle</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="page-title">
         Books read in 2024 📚
     </div>
-    <div class="page-subtitle" >
+    <div class="page-subtitle">
         [ A data viz doodle exploring my reading stats in 2024 ]
     </div>
     <div class="plot-area">
-      <div class="plot-area-row">
-          <div class="calendar-heatmap">
-              <div class="section-title">
-                  Number of books in progress per day
-              </div>
-              <div class="plot-note" >
-                  How many books am I juggling at the same time? This plot visualizes the number of books in progress for each day in 2024. <br/>
-                  Lighter color = fewer books in progress. It's clear that I'm rarely reading 1 thing at a time.<br/>
-                  🤹‍♀️ Maximum number of books I juggled: <b>6 books</b>
-              </div>
-              <div class="plot-container">
-                  <object type="text/html" class="embedded-plot" data="plots/calendar_heatmap.html" style="width:1050px; height:250px; "></object>
-
-              </div>
-          </div>
-
-      </div>
         <div class="plot-area-row">
-            <div class="reading-time">
-                <div class="section-title">
-                    Reading time in days
-                </div>
-                <div class="plot-note" >
-                    How many days does it take me to finish a book? This plot visualizes the time taken to read each book. <br/>
-                    Each book is represented by a vertical bar. Longer bar = More days. <br/>
-                    I tend to finish most books within 30 days (this is also the typical loan period for a book). <br/>
-                    🕰️ Longest time to read something: <b>295 days</b>, a struggle but I still finished it
-                </div>
-                <div class="plot-container">
-                    <object type="text/html" class="embedded-plot" data="plots/reading_time.html" style="width:1050px; height:650px; "></object>
-
-                </div>
+            <div class="section-title">
+                Number of books in progress per day
             </div>
-
-        </div>
-        <div class="plot-area-row">
-            <div class="popularity">
-                <div class="section-title">
-                    Popularity and ratings
-                </div>
-                <div class="plot-container">
-                    <div class="plot-note" >
-                        How do my ratings compare to community ratings? How popular are the books I read? <br/>
-                        Circle sizes correspond to popularity. More community reviews+ratings = larger circle. <br/>
-                        X-coordinate is my rating (in 0.25 increments), Y-coordinate is the community's average rating.<br/>
-                        Only a few of the things I read are super popular. I also tend to rate popular books lower than their community ratings.
-                    </div>
-                    <object type="text/html" class="embedded-plot" data="plots/popularity_and_ratings.html" style="width:850px; height:850px; "></object>
-
-                </div>
+            <div class="plot-note">
+                How many books am I juggling at the same time? This plot visualizes the number of books in progress
+                for each day in 2024. <br />
+                Lighter color = fewer books in progress. It's clear that I'm rarely reading 1 thing at a time.<br />
+                🤹‍♀️ Maximum number of books I juggled: <b>6 books</b>
+            </div>
+            <div class="plot-container">
+                <object type="text/html" class="embedded-plot" data="plots/calendar_heatmap.html"
+                    style="width:1050px; height:250px; "></object>
             </div>
         </div>
         <div class="plot-area-row">
-                <div class="rating-diff">
-                    <div class="section-title">
-                        Rating disparities
-                    </div>
-                    <div class="plot-container">
-                        <div class="plot-note" >
-                            What's the disparity between my rating and the community rating? <br/>
-                            The rating difference is within 0.5 stars for all books. This is not that surprising since:<br/>
-                            1. I tend to be quite moderate with ratings. 2. I only pick up stuff with a 3.5+ community rating. <br/>
-                            👍 Largest positive disparity (I liked it more): <b>0.50</b> <br/>
-                            👎 Largest negative disparity (I liked it less): <b>-0.43</b> <br/>
-                        </div>
-                        <object type="text/html" class="embedded-plot" data="plots/rating_diff.html" style="width:850px; height:850px; "></object>
-
-                    </div>
-                </div>
-        </div>
-        <div class="plot-area-row">
-            <div class="book-lengths">
-                <div class="section-title">
-                    Length of books
-                </div>
-                <div class="plot-note" >
-                    How long are the books I read this year? This plot visualizes how thick the books are based on their number of pages. <br/>
-                    Only books are included here, no audiobooks. Colours corresponds to the genre tags. <br/>
-                    The thickest books are typically YA. Memoirs and graphic novels are usually shorter.
-                </div>
-                <div class="plot-container">
-                    <object type="text/html" class="embedded-plot" data="plots/book_lengths.html" style="width:1050px; height: 350px;"></object>
-
-                </div>
+            <div class="section-title">
+                Reading time in days
+            </div>
+            <div class="plot-note">
+                How many days does it take me to finish a book? This plot visualizes the time taken to read each
+                book. <br />
+                Each book is represented by a vertical bar. Longer bar = More days. <br />
+                I tend to finish most books within 30 days (this is also the typical loan period for a book). <br />
+                🕰️ Longest time to read something: <b>295 days</b>, a struggle but I still finished it
+            </div>
+            <div class="plot-container">
+                <object type="text/html" class="embedded-plot" data="plots/reading_time.html"
+                    style="width:1050px; height:650px; "></object>
             </div>
         </div>
         <div class="plot-area-row">
-            <div class="audiobook-lengths">
-                <div class="section-title">
-                    Length of audiobooks
-                </div>
-                <div class="plot-note" >
-                    Audiobooks are increasingly a staple for me. This plot visualizes the length of audiobooks in hours. <br/>
-                    Each book is represented by a stack of circles. A full circle = 1 hour. <br/>
-                    Memoir is a big genre for me, whether book or audiobook. Fiction is a genre I primarily listen to. 
-                </div>
-                <div class="plot-container">
-                    <object type="text/html" class="embedded-plot" data="plots/audiobook_lengths.html" style="width:1050px; height: 650px;"></object>
-
-                </div>
+            <div class="section-title">
+                Popularity and ratings
+            </div>
+            <div class="plot-note">
+                How do my ratings compare to community ratings? How popular are the books I read? <br />
+                Circle sizes correspond to popularity. More community reviews+ratings = larger circle. <br />
+                X-coordinate is my rating (in 0.25 increments), Y-coordinate is the community's average
+                rating.<br />
+                Only a few of the things I read are super popular. I also tend to rate popular books lower than
+                their community ratings.
+            </div>
+            <div class="plot-container">
+                <object type="text/html" class="embedded-plot" data="plots/popularity_and_ratings.html"
+                    style="width:850px; height:850px; "></object>
+            </div>
+        </div>
+        <div class="plot-area-row">
+            <div class="section-title">
+                Rating disparities
+            </div>
+            <div class="plot-note">
+                What's the disparity between my rating and the community rating? <br />
+                The rating difference is within 0.5 stars for all books. This is not that surprising
+                since:<br />
+                1. I tend to be quite moderate with ratings. 2. I only pick up stuff with a 3.5+ community
+                rating. <br />
+                👍 Largest positive disparity (I liked it more): <b>0.50</b> <br />
+                👎 Largest negative disparity (I liked it less): <b>-0.43</b> <br />
+            </div>
+            <div class="plot-container">
+                <object type="text/html" class="embedded-plot" data="plots/rating_diff.html"
+                    style="width:850px; height:850px; "></object>
+            </div>
+        </div>
+        <div class="plot-area-row">
+            <div class="section-title">
+                Length of books
+            </div>
+            <div class="plot-note">
+                How long are the books I read this year? This plot visualizes how thick the books are based on their
+                number of pages. <br />
+                Only books are included here, no audiobooks. Colours corresponds to the genre tags. <br />
+                The thickest books are typically YA. Memoirs and graphic novels are usually shorter.
+            </div>
+            <div class="plot-container">
+                <object type="text/html" class="embedded-plot" data="plots/book_lengths.html"
+                    style="width:1050px; height: 350px;"></object>
+            </div>
+        </div>
+        <div class="plot-area-row">
+            <div class="section-title">
+                Length of audiobooks
+            </div>
+            <div class="plot-note">
+                Audiobooks are increasingly a staple for me. This plot visualizes the length of audiobooks in hours.
+                <br />
+                Each book is represented by a stack of circles. A full circle = 1 hour. <br />
+                Memoir is a big genre for me, whether book or audiobook. Fiction is a genre I primarily listen to.
+            </div>
+            <div class="plot-container">
+                <object type="text/html" class="embedded-plot" data="plots/audiobook_lengths.html"
+                    style="width:1050px; height: 650px;"></object>
             </div>
         </div>
 
     </div>
 
-  </body>
+</body>
+
 </html>
